@@ -1,5 +1,4 @@
-# getit-mybatis3
-study mybatis3 @ 2020.03.18
+# study-mybatis3 @ 2020.03.18
 
 ## 学习资源
 | 资源分类 | 作者 | 链接 |
