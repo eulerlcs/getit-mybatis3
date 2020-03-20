@@ -10,8 +10,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>mybatis3-get01</module>
-        <module>mybatis3-get02-spring</module>
+        <module>mybatis3-get01-helloworld</module>
+        <module>mybatis3-get02-springXmlConfig</module>
+        <module>mybatis3-get03-springJavaConfig</module>
     </modules>
 
     <properties>
@@ -54,7 +55,7 @@
                 <version>5.1.48</version>
             </dependency>
 
-           <dependency>
+            <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>1.7.11</version>
