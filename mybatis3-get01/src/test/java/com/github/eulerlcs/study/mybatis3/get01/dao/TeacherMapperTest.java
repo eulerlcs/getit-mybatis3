@@ -7,13 +7,11 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class TeacherMapperTest {
 
     @Test
     void selectAll() {
-        try(SqlSession sqlSession = MybatisUtil.getSqlSession()){
+        try (SqlSession sqlSession = MybatisUtil.getSqlSession()) {
             TeacherMapper teacherMapper = sqlSession.getMapper(TeacherMapper.class);
             List<Teacher> teacherList = teacherMapper.selectAll();
             teacherList.forEach(System.out::println);
@@ -22,7 +20,7 @@ class TeacherMapperTest {
 
     @Test
     void selectByPK() {
-        try(SqlSession sqlSession = MybatisUtil.getSqlSession()){
+        try (SqlSession sqlSession = MybatisUtil.getSqlSession()) {
             TeacherMapper teacherMapper = sqlSession.getMapper(TeacherMapper.class);
             Teacher teacher = teacherMapper.selectByPK(1);
             System.out.println(teacher);

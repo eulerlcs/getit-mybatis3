@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface TeacherMapper {
     List<Teacher> selectAll();
+
     Teacher selectByPK(int id);
 }

@@ -2,7 +2,6 @@ package com.github.eulerlcs.study.mybatis3.get02.dao;
 
 import com.github.eulerlcs.study.mybatis3.get02.dto.Teacher;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
