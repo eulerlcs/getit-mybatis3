@@ -1,4 +1,4 @@
-package com.github.eulerlcs.study.mybatis3.get01.dto;
+package com.github.eulerlcs.study.mybatis3.get02.dto;
 
 import lombok.Data;
 
