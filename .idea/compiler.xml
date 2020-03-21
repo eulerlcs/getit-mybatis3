@@ -8,12 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mybatis3-get01" />
-        <module name="mybatis3-get02-spring" />
+        <module name="mybatis3-get03-springJavaConfig" />
+        <module name="mybatis3-get01-helloworld" />
+        <module name="mybatis3-get02-springXmlConfig" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mybatis3-get01" target="11" />
-      <module name="mybatis3-get02-spring" target="11" />
+      <module name="mybatis3-get01-helloworld" target="11" />
+      <module name="mybatis3-get02-springXmlConfig" target="11" />
+      <module name="mybatis3-get03-springJavaConfig" target="11" />
       <module name="study-mybatis3" target="11" />
     </bytecodeTargetLevel>
   </component>

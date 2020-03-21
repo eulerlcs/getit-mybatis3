@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/mybatis3-get01/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mybatis3-get02-spring/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis3-get01-helloworld/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis3-get02-springXmlConfig/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis3-get03-springJavaConfig/src/main/java" charset="UTF-8" />
   </component>
 </project>
