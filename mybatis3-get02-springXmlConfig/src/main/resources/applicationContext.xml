@@ -1,0 +1,46 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd">
+
+    <context:component-scan base-package="com.github.eulerlcs.study.mybatis3"/>
+    <mybatis:scan base-package="com/github/eulerlcs/study/mybatis3"/>
+
+    <!-- DataSource -->
+    <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUrl"
+                  value="jdbc:mysql://localhost:33061/mybatis3?useUnicode=true&amp;useSSL=true&amp;useCharacterEncoding=utf-8&amp;serverTimezone=JST"/>
+        <property name="username" value="user01"/>
+        <property name="password" value="123456"/>
+    </bean>
+
+    <bean id="transactionManager" class="org.mybatis.spring.transaction.SpringManagedTransactionFactory"/>
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="transactionFactory" ref="transactionManager"/>
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+        <property name="typeAliasesPackage" value="com.github.eulerlcs.study.mybatis3.get02.dto"/>
+        <!--<property name="mapperLocations" value="classpath*:com/github/eulerlcs/study/mybatis3/get02/dao/*.xml"/>-->
+    </bean>
+
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="sqlSessionFactory"/>
+    </bean>
+
+    <bean id="teacherDao" class="com.github.eulerlcs.study.mybatis3.get02.dao.TeacherDao">
+        <property name="sqlSessionTemplate" ref="sqlSession"/>
+    </bean>
+
+    <!-- Mapper location -->
+    <!--
+        <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+            <property name="basePackage" value="com.github.eulerlcs.study.mybatis3.get02.dao"/>
+        </bean>
+    -->
+</beans>
