@@ -1,6 +1,7 @@
 package com.github.eulerlcs.study.mybatis3.get04;
 
 import com.github.eulerlcs.study.mybatis3.get04.dao.StudentDao;
+import com.github.eulerlcs.study.mybatis3.get04.dto.Student;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,7 +20,20 @@ public class Mybatis3Get04SpringbootApplication implements CommandLineRunner {
     }
 
     @Override
+    //   @Transactional
     public void run(String... args) {
+//        insert();
+//        insert();
         System.out.println(studentDao.selectAll());
+    }
+
+    void insert() {
+        Student student = new Student();
+        student.setId(10);
+        student.setName("test insert");
+        student.setTid(4);
+
+        int ret = studentDao.insert(student);
+        System.out.println(ret);
     }
 }

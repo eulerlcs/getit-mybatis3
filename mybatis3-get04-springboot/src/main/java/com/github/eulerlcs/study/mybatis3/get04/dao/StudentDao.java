@@ -26,4 +26,14 @@ public class StudentDao implements StudentMapper {
     public Student selectByPK(int id) {
         return sqlSession.getMapper(StudentMapper.class).selectByPK(id);
     }
+
+    @Override
+    public int insert(Student student) {
+        return sqlSession.getMapper(StudentMapper.class).insert(student);
+    }
+
+    @Override
+    public int deleteByPK(int id) {
+        return sqlSession.getMapper(StudentMapper.class).deleteByPK(id);
+    }
 }
