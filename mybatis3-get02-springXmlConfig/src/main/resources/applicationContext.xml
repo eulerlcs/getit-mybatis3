@@ -25,7 +25,7 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="transactionFactory" ref="transactionManager"/>
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
-        <property name="typeAliasesPackage" value="com.github.eulerlcs.study.mybatis3.get02.dto"/>
+        <property name="typeAliasesPackage" value="com.github.eulerlcs.study.mybatis3"/>
         <!--<property name="mapperLocations" value="classpath*:com/github/eulerlcs/study/mybatis3/get02/dao/*.xml"/>-->
     </bean>
 
@@ -40,7 +40,7 @@
     <!-- Mapper location -->
     <!--
         <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-            <property name="basePackage" value="com.github.eulerlcs.study.mybatis3.get02.dao"/>
+            <property name="basePackage" value="com.github.eulerlcs.study.mybatis3"/>
         </bean>
     -->
 </beans>

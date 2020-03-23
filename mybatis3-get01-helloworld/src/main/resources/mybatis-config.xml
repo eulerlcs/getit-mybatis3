@@ -6,7 +6,7 @@
     <properties resource="db-mysql.properties"/>
 
     <typeAliases>
-        <package name="com.github.eulerlcs.study.mybatis3.get01.dto"/>
+        <package name="com.github.eulerlcs.study.mybatis3"/>
     </typeAliases>
 
     <environments default="development">
@@ -22,7 +22,10 @@
     </environments>
 
     <mappers>
-        <mapper resource="com/github/eulerlcs/study/mybatis3/get01/dao/TeacherMapper.xml"/>
-        <mapper resource="com/github/eulerlcs/study/mybatis3/get01/dao/StudentMapper.xml"/>
+        <package name="com.github.eulerlcs.study.mybatis3"/>
+        <!--
+                <mapper resource="com/github/eulerlcs/study/mybatis3/get01/dao/TeacherMapper.xml"/>
+                <mapper resource="com/github/eulerlcs/study/mybatis3/get01/dao/StudentMapper.xml"/>
+        -->
     </mappers>
 </configuration>
