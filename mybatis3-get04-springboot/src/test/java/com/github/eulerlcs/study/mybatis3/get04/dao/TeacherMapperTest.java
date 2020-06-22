@@ -4,13 +4,15 @@ import com.github.eulerlcs.study.mybatis3.get04.dto.Teacher;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.util.List;
 
 @SpringBootTest
+@ComponentScan(basePackageClasses = {com.github.eulerlcs.study.mybatis3.get04.Mybatis3Get04SpringbootApplication.class})
 class TeacherMapperTest {
     @Autowired
-    private TeacherDao teacherDao;
+    private TeacherMapper teacherDao;
 
     @Test
     void selectAll() {

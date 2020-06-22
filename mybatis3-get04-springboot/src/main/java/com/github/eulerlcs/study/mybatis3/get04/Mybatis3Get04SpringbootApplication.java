@@ -1,17 +1,20 @@
 package com.github.eulerlcs.study.mybatis3.get04;
 
-import com.github.eulerlcs.study.mybatis3.get04.dao.StudentDao;
+import com.github.eulerlcs.study.mybatis3.get04.dao.StudentMapper;
 import com.github.eulerlcs.study.mybatis3.get04.dto.Student;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@Slf4j
 public class Mybatis3Get04SpringbootApplication implements CommandLineRunner {
 
-    private final StudentDao studentDao;
+    private final StudentMapper studentDao;
 
-    public Mybatis3Get04SpringbootApplication(StudentDao studentDao) {
+    public Mybatis3Get04SpringbootApplication(StudentMapper studentDao) {
         this.studentDao = studentDao;
     }
 
@@ -24,7 +27,7 @@ public class Mybatis3Get04SpringbootApplication implements CommandLineRunner {
     public void run(String... args) {
 //        insert();
 //        insert();
-        System.out.println(studentDao.selectAll());
+        log.warn(studentDao.selectAll().toString());
     }
 
     void insert() {

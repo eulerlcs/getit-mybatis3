@@ -1,10 +1,12 @@
 spring:
   datasource:
+    driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:33061/mybatis3?useUnicode=true&useSSL=true&useCharacterEncoding=utf-8&serverTimezone=JST
     username: user01
     password: 123456
 mybatis:
-  #  type-aliases-package: com.github.eulerlcs.study.mybatis3
+  #  type-aliases-package: com.github.eulerlcs.study.mybatis3.get04.dto
+  mapper-locations: mapper/*.xml
   config-location: classpath:mybatis-config.xml
 logging:
   level:

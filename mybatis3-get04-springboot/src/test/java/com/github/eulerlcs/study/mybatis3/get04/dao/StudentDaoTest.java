@@ -18,7 +18,7 @@ import java.util.List;
 class StudentDaoTest {
 
     @Autowired
-    private StudentDao studentDao;
+    private StudentMapper studentDao;
 
     @Test
     void selectAll() {
