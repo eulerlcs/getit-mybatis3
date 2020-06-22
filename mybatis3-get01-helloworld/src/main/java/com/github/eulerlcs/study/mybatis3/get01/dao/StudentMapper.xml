@@ -8,6 +8,6 @@
     </select>
 
     <select id="selectByPK" resultType="Student">
-        select * from student where id = #{id}
+        select id, concat(name, "_sub") as name, tid from student where id = #{id}
     </select>
 </mapper>

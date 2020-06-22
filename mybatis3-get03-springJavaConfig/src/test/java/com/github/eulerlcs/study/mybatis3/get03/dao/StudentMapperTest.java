@@ -9,6 +9,8 @@ import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import java.util.List;
 
 
+//@ExtendWith(SpringExtension.class)
+//@ContextConfiguration(classes = ApplicationConfig.class)
 @SpringJUnitConfig(ApplicationConfig.class)
 class StudentMapperTest {
 
